@@ -8,7 +8,7 @@
 const int defaultAge = 0;
 const std::string unknown = "unknown";
 
-class Patient {
+class Player {
 
     public:
      int age;
@@ -16,35 +16,35 @@ class Patient {
      std::string name;
 
     public:
-     Patient();                                                                      // Default Constructor
-     Patient(int years, const std::string &birthdate, const std::string &aliase);    // Argument-List Constructor
-     Patient(Patient &);
-     Patient & operator = (const Patient &);
+     Player();                                                                      // Default Constructor
+     Player(int years, const std::string &birthdate, const std::string &aliase);    // Argument-List Constructor
+     Player(Player &);
+     Player & operator = (const Player &);
      void print();
 };
 
-Patient::Patient() : age(defaultAge), dob(unknown), name(unknown) {
-    puts("Patient information from default constructor:");
+Player::Player() : age(defaultAge), dob(unknown), name(unknown) {
+    puts("Player information from default constructor:");
 }
 
-Patient::Patient(int years, const std::string &birthdate, const std::string &aliase) 
+Player::Player(int years, const std::string &birthdate, const std::string &aliase) 
 : age(years), dob(birthdate), name(aliase) {
-    puts("Patient information from move-constructor constructor:");
+    puts("Player information from move-constructor constructor:");
 }
 
-Patient::Patient(Patient &rValue) {
-    puts("Patient information from copy constructor:");
+Player::Player(Player &rValue) {
+    puts("Player information from copy constructor:");
     age  = 57;
     dob  = "January 21, 1963";
     name = "Hakeem Olajuwon";
 }
 
-void Patient::print() {
+void Player::print() {
     printf(" Name - %d\n DOB  - %s\n Name - %s\n\n", age, dob.c_str(), name.c_str());
 }
 
-Patient &Patient::operator = (const Patient &rValue) {
-    puts("Patient information from copy operator");
+Player &Player::operator = (const Player &rValue) {
+    puts("Player information from copy operator");
     if(this != &rValue) {
         age  = 72;
         dob  = "April 16, 1947";
@@ -55,13 +55,13 @@ Patient &Patient::operator = (const Patient &rValue) {
 
 int main(void) {
 
-    Patient p0;
+    Player p0;
     p0.print();
     
-    Patient p1(57, "February 17, 1963", "Michael Jordan");
+    Player p1(57, "February 17, 1963", "Michael Jordan");
     p1.print();
 
-    Patient p2 = p1;
+    Player p2 = p1;
     p2.print();
 
     p0 = p2;
