@@ -1,0 +1,52 @@
+Topic: Linked Lists
+
+
+== ARRAYS ==
+
+First, some notes on arrays:
+
+- They are fixed in size.
+
+- They are contiguous in memory.
+
+Pros:
+
+- Arrays give us O(1) access to the nth element.
+
+Cons:
+
+- Insertion and deletion from an arbitrary index in an array (assuming we want
+  to shift everything over to fill in the gap or make room for the new element)
+  are potentially expensive: O(n)
+
+- More specifically: Suppose we have 1000 elements and we want to delete the
+  10th one. This is an O(n) operation if we want to move elements over to fill
+  in the gap at index 9 (which is the 10th element in the array).
+
+- Arrays don't grow to accomodate extra elements.
+
+- Arrays might be larger than strictly necessary. Memory bloat!
+
+
+== LINKED LISTS ==
+
+A linked list is just a data structure consisting of nodes that are linked
+together with pointers. The length of the list is dynamic, and nodes can be
+located all over the place in memory. (They don't have to be contiguous.)
+
+Pros:
+
+ - Insertion and deletion at arbitrary positions in the list doesn't require us
+	to shift elements all over the place. Thus, the operations are pretty cheap
+   (that is, after we find the element we're looking for!).
+
+ - Length the of the list can change dynamically.
+
+ - We don't have to find a contiguous block of memory for the list. Nodes can be
+   scattered throughout memory.
+
+Cons:
+
+ - We no longer have direct access to each element.
+ 
+ - Takes up more memory than an array; we have to store lots of addresses!
