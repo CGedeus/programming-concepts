@@ -1,0 +1,3 @@
+﻿  FriendFunctions.cpp
+C:\Users\cgede\source\repos\FriendFunctions\FriendFunctions.cpp(22): error C4700: uninitialized local variable 'day2' used
+C:\Users\cgede\source\repos\FriendFunctions\FriendFunctions.cpp(22): error C4700: uninitialized local variable 'day1' used

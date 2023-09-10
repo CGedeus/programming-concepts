@@ -1,0 +1,4 @@
+﻿  Bubble.cpp
+C:\Users\cgede\source\repos\Bubble\Bubble.cpp(50,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\cgede\source\repos\Bubble\Bubble.cpp(32): warning C4715: 'bubbleSort': not all control paths return a value
+  Bubble.vcxproj -> C:\Users\cgede\source\repos\Bubble\Debug\Bubble.exe
