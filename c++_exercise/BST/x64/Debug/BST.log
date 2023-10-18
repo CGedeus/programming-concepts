@@ -1,0 +1,3 @@
+﻿  BST.cpp
+C:\Users\cgede\source\repos\BST\BST.cpp(57): warning C4715: 'BinSearchTree::insert': not all control paths return a value
+  BST.vcxproj -> C:\Users\cgede\source\repos\BST\x64\Debug\BST.exe
